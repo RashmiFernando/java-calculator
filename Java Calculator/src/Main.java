@@ -23,11 +23,13 @@ public class Main {
         number2 = scannerObject.nextDouble();
 
         // calculation
+        Operations operationsObject = new Operations();
+
         switch (operator) {
-            case '+' -> result = number1 + number2;
-            case '-' -> result = number1 - number2;
-            case '*' -> result = number1 * number2;
-            case '/' -> result = number1 / number2;
+            case '+' -> result = operationsObject.addition(number1, number2);
+            case '-' -> result = operationsObject.subtraction(number1, number2);
+            case '*' -> result = operationsObject.multiplication(number1, number2);
+            case '/' -> result = operationsObject.division(number1, number2);
             default -> {
                 System.out.println("Invalid operator");
             }
